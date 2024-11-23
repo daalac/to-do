@@ -158,4 +158,19 @@ input[type="checkbox"]{
         margin-top: 50px;
         font-size: 15vw;
     }
+
+
+
+    .language-toggle {
+    position: fixed;
+    top: 10px; /* يمكنك تعديل هذه القيمة لتحديد المسافة من أعلى الصفحة */
+    right: 10px; /* يمكنك تعديل هذه القيمة لتحديد المسافة من يمين الصفحة */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00FFC4; /* لون الخلفية */
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 999; /* لضمان ظهور الزر فوق العناصر الأخرى */
+}
 }
