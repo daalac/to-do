@@ -1,3 +1,5 @@
+
+
 // Array to store tasks
 let tasks = [];
 
@@ -63,3 +65,39 @@ todoForm.addEventListener('submit', addTask);
 
 // Initial render
 renderTasks();
+
+const languageToggle = document.getElementById('language-toggle');
+const arabicContent = {
+  // هنا تضع النصوص العربية التي تريد عرضها
+heading: 'قائمة مهام المشروع',
+placeholder: 'أدخل مهمة جديدة',
+addButton: 'أضف مهمة',
+
+  // ... باقي النصوص
+};
+const englishContent = {
+  // هنا تضع النصوص الإنجليزية التي تريد عرضها
+heading: 'Project TO-DO List',
+placeholder: 'Enter a new task',
+addButton: 'Add Task',
+
+  // ... باقي النصوص
+};
+
+let isArabic = false;
+
+languageToggle.addEventListener('click', () => {
+isArabic = !isArabic;
+const currentContent = isArabic ? arabicContent : englishContent;
+
+  // تغيير نص الزر
+languageToggle.textContent = isArabic ? 'EN' : 'AR';
+
+  // تغيير نص العناوين والأزرار وغيرها
+document.querySelector('h1').textContent = currentContent.heading;
+document.getElementById('todo-input').placeholder = currentContent.placeholder;
+document.getElementById('add-button').textContent = currentContent.addButton;
+  // ... باقي العناصر
+
+  // يمكنك استخدام مكتبة مثل jQuery لتسهيل عملية تحديد العناصر وتغيير محتواها
+});
