@@ -1,10 +1,10 @@
-:root{
-    --background: #101114;
-    --primary-color: #1C1D20;
-    --secondary-color: #4A4D57;
-    --accent-color: #00FFC4;
-    --text-color: #F9F9F9;
-}
+:root {
+    --background: #fff; /* Light Background Color */
+    --primary-color: #f0f0f0; /* Light Primary Color */
+    --secondary-color: #ddd; /* Light Secondary Color */
+    --accent-color: #00FFC4; /* Accent Color (remains the same) */
+    --text-color: #000; /* Light Text Color */
+  }
 
 *{
     margin: 0;
@@ -16,6 +16,8 @@ html{
   font-size: 16pt;
   color: var(--text-color);
 }
+
+
 
 body{
     min-height: 100vh;
@@ -158,19 +160,31 @@ input[type="checkbox"]{
         margin-top: 50px;
         font-size: 15vw;
     }
+}
 
-
-
-    .language-toggle {
+.language-toggle {
     position: fixed;
     top: 10px; /* يمكنك تعديل هذه القيمة لتحديد المسافة من أعلى الصفحة */
     right: 10px; /* يمكنك تعديل هذه القيمة لتحديد المسافة من يمين الصفحة */
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #00FFC4; /* لون الخلفية */
-    color: rgb(0, 0, 0);
+    background-color:var(--accent-color); /* لون الخلفية */
+    color: var(--background);
     cursor: pointer;
     z-index: 999; /* لضمان ظهور الزر فوق العناصر الأخرى */
 }
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px; /* يمكنك تعديل هذه القيمة لتحديد المسافة من أعلى الصفحة */
+    left: 10px; /* يمكنك تعديل هذه القيمة لتحديد المسافة من يمين الصفحة */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:var(--accent-color); /* لون الخلفية */
+    color:var(--background);
+    cursor: pointer;
+    z-index: 999; /* لضمان ظهور الزر فوق العناصر الأخرى */
 }
+
