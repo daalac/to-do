@@ -73,6 +73,7 @@ heading: 'قائمة مهام المشروع',
 placeholder: 'أدخل مهمة جديدة',
 addButton: 'أضف مهمة',
 
+
   // ... باقي النصوص
 };
 const englishContent = {
@@ -80,6 +81,7 @@ const englishContent = {
 heading: 'Project TO-DO List',
 placeholder: 'Enter a new task',
 addButton: 'Add Task',
+
 
   // ... باقي النصوص
 };
@@ -101,3 +103,36 @@ document.getElementById('add-button').textContent = currentContent.addButton;
 
   // يمكنك استخدام مكتبة مثل jQuery لتسهيل عملية تحديد العناصر وتغيير محتواها
 });
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+let isDarkMode = false; // Initially set to light mode
+
+darkModeToggle.addEventListener('click', () => {
+  isDarkMode = !isDarkMode;
+
+  
+
+  if (isDarkMode) {
+    document.documentElement.style.setProperty('--background', '#101114');
+    document.documentElement.style.setProperty('--primary-color', '#1C1D20');
+    // ... Set other dark mode variables
+  } else {
+    document.documentElement.style.setProperty('--background', '#fff');
+    document.documentElement.style.setProperty('--primary-color', '#f0f0f0');
+    // ... Set other light mode variables
+  }
+});
+
+const button = document.getElementById("dark-mode-toggle");
+
+button.addEventListener("click", function() {
+  if (button.textContent   
+=== "light") {
+    button.textContent = "dark";
+     // تغيير لون الخلفية
+  } else {
+    button.textContent = "light";
+     // إعادة اللون الافتراضي
+  }
+});
+
